@@ -2,6 +2,23 @@ html, body {
 	height: 100%;
 }
 
+
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+	.container {
+		width: 100% !important;
+		padding: 0 50px !important;
+	}
+  .grid {
+     flex-direction: column;
+  }
+  .item {
+  	width: 100% !important;
+  	margin-bottom: 30px !important;
+  }
+}
+
 body {
 	font-family: 'Montserrat', sans-serif;
 	color: #031b4e;
@@ -15,6 +32,7 @@ a {
 	box-sizing: border-box;
 	width: 1200px;
 	margin: 0 auto;
+	padding: 20px 0;
 }
 
 /* Buttons */
