@@ -7,6 +7,10 @@ body {
 	color: #031b4e;
 }
 
+a {
+	text-decoration: none;
+}
+
 .container {
 	box-sizing: border-box;
 	width: 1200px;
@@ -25,7 +29,7 @@ body {
 	background-color: #0069ff;
 	color: #ffffff;
 	font-weight: 600;
-	transition: all 0.3s cubic-bezier(.55,.09,.68,.53);
+	transition: all 0.2s cubic-bezier(.55,.09,.68,.53);
 	text-align: center;
 }
 
@@ -47,6 +51,8 @@ body {
 	background-color: #0069ff;
 	color: #ffffff;
 	cursor: pointer;
+	border: none;
+	line-height: 40px;
 }
 
 /* Inputs */
@@ -86,7 +92,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-content: stretch;
-  transition: all 0.3s cubic-bezier(.55,.09,.68,.53);
+  transition: all 0.2s cubic-bezier(.55,.09,.68,.53);
 }
 
 .item:hover {
@@ -125,6 +131,7 @@ box-shadow: 0px 0px 15px 0px rgba(243,244,247,1);
 	padding: 0;
 	font-weight: 500;
 	margin: 5px 0;
+	color: #031b4e;
 }
 
 /* Modificators */
@@ -136,8 +143,17 @@ box-shadow: 0px 0px 15px 0px rgba(243,244,247,1);
 .item-button {
 	text-decoration: none;
 	height: 30px;
-	line-height: 26px;
-	font-size: 12pt;
+	line-height: 29px;
+	font-size: 10pt;
+	border: none;
+	border-radius: 0 0 5px 5px;
+	border-top: 1px solid #e5e8ed;
+	color: #818da6;
+}
+
+.item-button:hover {
+	line-height: 30px;
+	background: #15cd72;
 }
 
 .item-info h5 {
