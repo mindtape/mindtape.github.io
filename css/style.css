@@ -1,0 +1,147 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	color: #031b4e;
+}
+
+.container {
+	box-sizing: border-box;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/* Buttons */
+/* Default button */
+.button { 
+	display: inline-block;
+	box-sizing: border-box;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 25px;
+	border-radius: 5px;
+	background-color: #0069ff;
+	color: #ffffff;
+	font-weight: 600;
+	transition: all 0.3s cubic-bezier(.55,.09,.68,.53);
+	text-align: center;
+}
+
+.button:hover {
+	background-color: #004fc0;
+	cursor: pointer;
+}
+
+/* Outline button */
+.outline {
+	box-sizing: border-box;
+	background: #ffffff;
+	border: 2px solid #0069ff;
+	color: #0069ff;
+	line-height: 36px;
+}
+
+.outline:hover {
+	background-color: #0069ff;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+/* Inputs */
+
+.input-text {
+	box-sizing: border-box;
+	background: #ffffff;
+	height: 40px;
+	line-height: 36px;
+	padding: 0 10px;
+	border-radius: 5px;
+	border: 2px solid #e5e8ed;
+	color: #818da6;
+	transition: all 0.3s cubic-bezier(.55,.09,.68,.53);
+}
+
+.input-text:focus {
+	border: 2px solid #0069ff;
+	color: #031b4e;
+}
+
+/* Item card */
+
+.item {
+	width: 235px;
+	height: 380px;
+	box-sizing: border-box;
+	background: #ffffff;
+	border: 1px solid #e5e8ed;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 17px -5px rgba(243,244,246,1);
+	-moz-box-shadow: 0px 0px 17px -5px rgba(243,244,246,1);
+	box-shadow: 0px 0px 17px -5px rgba(243,244,246,1);
+	margin: 2.5px 0px 2.5px 5px;
+	padding-top: 15px;
+	  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: stretch;
+  transition: all 0.3s cubic-bezier(.55,.09,.68,.53);
+}
+
+.item:hover {
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(243,244,247,1);
+-moz-box-shadow: 0px 0px 15px 0px rgba(243,244,247,1);
+box-shadow: 0px 0px 15px 0px rgba(243,244,247,1);
+ -webkit-transform: scale(1.08);
+  -ms-transform: scale(1.08);
+  transform: scale(1.08);
+}
+
+.item img {
+	flex: 0 1 auto;
+	height: 200px;
+	max-width: 225px;
+	display: block;
+	margin: 0 auto;
+}
+
+.item-info {
+	flex: 0 1 auto;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px;
+}
+
+.item-info p {
+	color: #516285;
+	margin: 0;
+	padding: 0;
+	font-size: 10pt;
+}
+
+.item-info h4 {
+	margin: 0;
+	padding: 0;
+	font-weight: 500;
+	margin: 5px 0;
+}
+
+/* Modificators */
+
+.fw {
+	width: 100%;
+}
+
+.item-button {
+	text-decoration: none;
+	height: 30px;
+	line-height: 26px;
+	font-size: 12pt;
+}
+
+.item-info h5 {
+	margin: 5px 0;
+	font-weight: 600;
+	font-size: 14pt;
+}
