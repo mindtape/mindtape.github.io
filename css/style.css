@@ -95,7 +95,7 @@ a:hover {
 	-webkit-box-shadow: 0px 0px 17px -5px rgba(243,244,246,1);
 	-moz-box-shadow: 0px 0px 17px -5px rgba(243,244,246,1);
 	box-shadow: 0px 0px 17px -5px rgba(243,244,246,1);
-	margin: 2.5px 0px 2.5px 5px;
+	margin: 5px 0px 2.5px 2.5px;
 	padding-top: 15px;
 	  display: flex;
   flex-direction: column;
@@ -251,7 +251,7 @@ box-shadow: 0px 0px 15px 0px rgba(243,244,247,1);
 @media screen and (max-width: 600px) {
 	.container {
 		width: 100%;
-		padding: 0 15px;
+		padding: 50px 15px 0 15px;
 	}
   	.grid {
     	flex-direction: column;
@@ -259,7 +259,7 @@ box-shadow: 0px 0px 15px 0px rgba(243,244,247,1);
   	.item {
   		margin: 0;
   		width: 100%;
-  		margin-bottom: 20px;
+  		margin-top: 20px;
   		height: 450px;
  	 }
  	 .item-button {
@@ -270,5 +270,18 @@ box-shadow: 0px 0px 15px 0px rgba(243,244,247,1);
  	.item-button:hover {
  	 	height: 50px;
  	 	line-height: 50px;
+ 	 }
+
+ 	 .top-header {
+ 	 	display: none;
+ 	 }
+
+ 	 .header {
+ 	 	position: fixed;
+ 	 	z-index: 100;
+ 	 }
+
+ 	 .header .grid {
+ 	 	flex-direction: row;
  	 }
 }
