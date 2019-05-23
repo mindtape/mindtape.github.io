@@ -4,20 +4,7 @@ html, body {
 
 
 
-/* On screens that are 600px or less, set the background color to olive */
-@media screen and (max-width: 600px) {
-	.container {
-		width: 100% !important;
-		padding: 0 50px !important;
-	}
-  .grid {
-     flex-direction: column;
-  }
-  .item {
-  	width: 100% !important;
-  	margin-bottom: 30px !important;
-  }
-}
+
 
 body {
 	font-family: 'Montserrat', sans-serif;
@@ -26,6 +13,10 @@ body {
 
 a {
 	text-decoration: none;
+}
+
+a:hover {
+	color: #0069ff;
 }
 
 .container {
@@ -158,6 +149,14 @@ box-shadow: 0px 0px 15px 0px rgba(243,244,247,1);
 	width: 100%;
 }
 
+.p-l {
+	text-align: left;
+}
+
+.p-r {
+	float: right;
+}
+
 .item-button {
 	text-decoration: none;
 	height: 30px;
@@ -179,4 +178,97 @@ box-shadow: 0px 0px 15px 0px rgba(243,244,247,1);
 	font-weight: 600;
 	font-size: 10pt;
 	color: #516285;
+}
+
+.top-header {
+	background: #ffffff;
+	box-sizing: border-box;
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 1px solid #e5e8ed;
+	font-size: 10pt;
+	font-weight: 600;
+	color: #5b6987;
+	padding: 0 20px;
+}
+
+.top-header a {
+	color: #5b6987;
+}
+
+.top-header a:hover {
+	color: #0069ff;
+}
+
+.top-header p {
+	margin: 0;
+	padding: 0;
+}
+
+.top-menu {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+
+.top-menu li {
+	margin-left: 20px;
+	
+}
+
+
+.header {
+	box-sizing: border-box;
+	background: #ffffff;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 11pt;
+	font-weight: 600;
+	color: #5b6987;
+	padding: 0 20px;
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(229,232,237,1);
+	-moz-box-shadow: 0px 5px 5px 0px rgba(229,232,237,1);
+	box-shadow: 0px 5px 5px 0px rgba(229,232,237,1);
+}
+
+.header a {
+	color: #5b6987;
+}
+
+.header a:hover {
+	color: #0069ff;
+}
+
+.header i {
+	color: #0069ff;
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+	.container {
+		width: 100%;
+		padding: 0 15px;
+	}
+  	.grid {
+    	flex-direction: column;
+  	}
+  	.item {
+  		margin: 0;
+  		width: 100%;
+  		margin-bottom: 20px;
+  		height: 450px;
+ 	 }
+ 	 .item-button {
+ 	 	height: 50px;
+ 	 	line-height: 50px;
+ 	 }
+
+ 	.item-button:hover {
+ 	 	height: 50px;
+ 	 	line-height: 50px;
+ 	 }
 }
