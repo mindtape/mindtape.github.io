@@ -1,6 +1,6 @@
 body
 {
-	font-family: 'IBM Plex Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 12pt;
 }
 
@@ -44,7 +44,7 @@ body
 
 input[type=text]
 {
-	font-family: 'IBM Plex Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	box-sizing: border-box;
 	font-size: 12pt;
 	border: none;
