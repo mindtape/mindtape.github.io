@@ -1,0 +1,73 @@
+body
+{
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 12pt;
+}
+
+.container
+{
+	width: 100%;
+	padding: 20px;
+}
+
+.button
+{
+	box-sizing: border-box;
+	transition: 0.5s;
+	display: inline-block;
+	background: #0055FF;
+	font-weight: bold;
+	height: 48px;
+	line-height: 48px;
+	padding: 0 20px;
+	text-decoration: none;
+	color: #FFFFFF;
+	border-radius: 5px;
+}
+
+.button:hover
+{
+	background: #0000FF;
+}
+
+.outline {
+	line-height: 44px;
+	background: #FFFFFF;
+	border: 2px solid #0055FF;
+	color: #0055FF;
+}
+
+.outline:hover {
+	background: #0055FF;
+	color: #FFFFFF;
+}
+
+input[type=text]
+{
+	font-family: 'IBM Plex Sans', sans-serif;
+	box-sizing: border-box;
+	font-size: 12pt;
+	border: none;
+	border: 1px solid #f1f1f1;
+	color: rgba(3,27,78,.7);
+	border-radius: 5px;
+	height: 48px;
+	line-height: 48px;
+	padding: 0 15px;
+	margin-bottom: 10px;
+}
+
+input[type=text]:focus
+{
+	border: 1px solid #0055FF;
+}
+
+.test
+{
+	width: 700px;
+	height: 350px;
+	background-image: url(https://www.transparenttextures.com/patterns/escheresque.png), linear-gradient(to top, #f77062 0%, #fe5196 100%);
+	background-blend-mode: overlay;
+}
+
+.f-w { width: 100%; }
