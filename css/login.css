@@ -14,9 +14,16 @@ body
 	color: #031b4e;
 }
 
+.info {
+
+  min-height: 0;
+  transition: .5s;
+}
+
 @media screen and (max-height: 400px) {
   .info {
-    display: none;
+  	font-size: 8pt;
+    min-height: 50px;
   }
 }
 
