@@ -9,7 +9,7 @@ body
 	box-sizing: border-box;
 	position: absolute;
 	width: 100%;
-	background-image: url(https://www.transparenttextures.com/patterns/escheresque.png), linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
+	background-image: url(https://www.transparenttextures.com/patterns/green-gobbler.png), linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
 	background-blend-mode: overlay;
 	color: #031b4e;
 }
@@ -18,7 +18,7 @@ body
 {
 	box-sizing: border-box;
 	width: 100%;
-	padding: 0 20px;
+	padding: 20px;
 }
 
 .login-box
@@ -27,8 +27,23 @@ body
 	background: #FFFFFF;
 	width: 100%;
 	margin: 0 auto;
-	margin-top: 100px;
 	border-radius: 5px;
 	padding: 20px;
 	text-align: center;
+}
+
+.puple
+{
+	background: #6F02B5;
+}
+
+.purple-outline
+{
+	border: none;
+	border: 2px solid #6F02B5;
+	color: #6F02B5;
+}
+
+.puple input:active {
+	border: 1px solid #6F02B5;
 }
