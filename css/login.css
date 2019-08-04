@@ -14,6 +14,12 @@ body
 	color: #031b4e;
 }
 
+@media screen and (max-height: 400px) {
+  .info {
+    display: none;
+  }
+}
+
 .login-container
 {
 	box-sizing: border-box;
