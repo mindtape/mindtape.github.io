@@ -11,19 +11,31 @@ body
 	width: 100%;
 	background-image: url(https://www.transparenttextures.com/patterns/green-gobbler.png), linear-gradient( 113.1deg,  rgba(254,140,48,1) 14%, rgba(253,75,101,1) 80.5%, rgba(255,53,109,1) 100.6% );
 	background-blend-mode: overlay;
-	color: #031b4e;
+}
+
+h1 {
+	margin: 0;
 }
 
 .info {
 
   min-height: 0;
   transition: .5s;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-height: 400px) {
   .info {
-  	font-size: 8pt;
-    min-height: 50px;
+  	transform: scale(0.0, 0.0);
+    min-height: 0px;
+    margin: 0;
+    font-weight: 600;
+    opacity: 0.7;
+  }
+
+  .login-box
+  {
+  	padding-top: 0px !important;
   }
 }
 
@@ -31,33 +43,39 @@ body
 {
 	box-sizing: border-box;
 	width: 100%;
-	padding: 20px;
+	padding: 0  20px;
 }
 
 .login-box
 {
 	box-sizing: border-box;
-	background: #FFFFFF;
+
 	width: 100%;
 	margin: 0 auto;
 	border-radius: 5px;
 	padding: 20px;
 	text-align: center;
--webkit-box-shadow: 0px 0px 20px -10px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 0px 20px -10px rgba(0,0,0,0.75);
-box-shadow: 0px 0px 20px -10px rgba(0,0,0,0.75);
+
 }
 
-.puple
+.purple
 {
 	background: rgba(255,53,109,1);
+}
+
+.purple:hover {
+	background: black;
 }
 
 .purple-outline
 {
 	border: none;
-	border: 2px solid rgba(255,53,109,1);
+	background: #FFFFFF;
+	height: 48px;
+	line-height: 48px;
 	color: rgba(255,53,109,1);
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
 }
 
 .puple input:active {
@@ -66,6 +84,7 @@ box-shadow: 0px 0px 20px -10px rgba(0,0,0,0.75);
 
 .copy
 {
+	box-sizing: border-box;
 	color: #FFFFFF;
 	font-weight: 600;
 	width: 100%;
@@ -73,4 +92,5 @@ box-shadow: 0px 0px 20px -10px rgba(0,0,0,0.75);
 	font-size: 10pt;
 	margin-top: 50px;
 	opacity: 0.7;
+	padding: 0 40px;
 }
