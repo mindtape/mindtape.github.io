@@ -27,15 +27,11 @@ h1 {
 @media screen and (max-height: 400px) {
   .info {
   	transform: scale(0.0, 0.0);
-    min-height: 0px;
-    margin: 0;
-    font-weight: 600;
-    opacity: 0.7;
   }
 
   .login-box
   {
-  	padding-top: 0px !important;
+  	transform: translateY(-40px);
   }
 }
 
@@ -55,6 +51,8 @@ h1 {
 	border-radius: 5px;
 	padding: 20px;
 	text-align: center;
+	transition: .5s;
+
 
 }
 
@@ -63,9 +61,6 @@ h1 {
 	background: rgba(255,53,109,1);
 }
 
-.purple:hover {
-	background: black;
-}
 
 .purple-outline
 {
