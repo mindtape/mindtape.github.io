@@ -57,6 +57,7 @@ input[type=text]
 	padding: 0 15px;
 	margin-bottom: 10px;
 	background: #FFFFFF;
+	font-weight: 600;
 }
 
 input[type=text]:focus
