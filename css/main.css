@@ -116,7 +116,7 @@ body
 }
 
 /* Forms */
-input[type=text]
+input[type=text],[type=password]
 {
   box-sizing: border-box;
   display: inline-block;
@@ -124,5 +124,90 @@ input[type=text]
   line-height: 46px;
   padding: 0 10px;
   border-radius: 5px;
-  border: 1px solid #8B8B8B;
+  border: 1px solid #aba9bc;
+  color: #464555;
 }
+
+::placeholder
+{
+  color: #464555;
+}
+
+/* Notifications */
+
+.notification-bage
+{
+  display: inline-block;
+  background: #F80046;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 11pt;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+ /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #1563FF;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(29px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 10px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+} 
