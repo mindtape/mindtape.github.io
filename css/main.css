@@ -1,76 +1,128 @@
+/* montserrat-regular - cyrillic_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+       url('fonts/montserrat-v14-cyrillic_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/montserrat-v14-cyrillic_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-600 - cyrillic_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+       url('fonts/montserrat-v14-cyrillic_latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/montserrat-v14-cyrillic_latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-700 - cyrillic_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+       url('fonts/montserrat-v14-cyrillic_latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/montserrat-v14-cyrillic_latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* ONLY FOR GISTS - REMOVE IN PRODUCTION VERSION */
+.gist { width: 800px; margin-top: 20px; }
+/* ONLY FOR GISTS - REMOVE IN PRODUCTION VERSION */
+
+/* DEBUG ONLY - REMOVE IN PRODUCTION VERSION */
 body
 {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 12pt;
-	color: #FFFFFF;
+  padding: 20px 100px;
 }
+/* DEBUG ONLY - REMOVE IN PRODUCTION VERSION */
 
-.container
+body	
 {
-	width: 100%;
-	padding: 20px;
+  font-family: 'Montserrat';
+  font-size: 12pt;
+  color: #464555;
 }
 
-.button
+/* Buttons */
+
+.button, button
 {
-	box-sizing: border-box;
-	transition: 0.5s;
-	display: inline-block;
-	background: rgba(255,53,109,1);
-	font-weight: bold;
-	height: 48px;
-	line-height: 48px;
-	padding: 0 20px;
-	text-decoration: none;
-	color: #FFFFFF;
-	border-radius: 5px;
+  font-family: 'Montserrat';
+  outline: 0;
+  border: 0;
+  display: inline-block;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 600;
+  background: #1563FF;
+  color: #FFFFFF;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 5px;
+  padding: 0 40px;
 }
 
-.button:hover
+.outline
 {
-	background: #0000FF;
+  background: #FFFFFF;
+  color: #1563FF;
+  border: 1px solid #1563FF;
+  line-height: 46px;
+  padding: 0 39px;
 }
 
-.outline {
-	line-height: 44px;
-	background: #FFFFFF;
-	border: 2px solid #0055FF;
-	color: #0055FF;
+.light 
+{
+  color: #8B8B8B;
+  border: 1px solid #8B8B8B;
 }
 
-.outline:hover {
-	background: #0055FF;
-	color: #FFFFFF;
+/* Cards */
+
+.card 
+{
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 20px -10px rgba(171,169,188,1);
+  -moz-box-shadow: 0px 0px 20px -10px rgba(171,169,188,1);
+  box-shadow: 0px 0px 20px -10px rgba(171,169,188,1);
+  padding: 20px;
 }
 
+.card h1 
+{ 
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 16pt;
+}
+
+.list
+{
+  box-sizing: border-box;
+  background: #FFFFFF;
+}
+
+.list-item
+{
+  border-bottom: 1px solid #EEEEEE;
+  height: 48px;
+  line-height: 47px;
+  padding: 0 10px;
+}
+
+/* Forms */
 input[type=text]
 {
-	font-family: 'Montserrat', sans-serif;
-	box-sizing: border-box;
-	font-size: 12pt;
-	border: none;
-	border: 1px solid #f1f1f1;
-	color: rgba(3,27,78,.7);
-	border-radius: 5px;
-	height: 48px;
-	line-height: 48px;
-	padding: 0 15px;
-	margin-bottom: 10px;
-	background: #FFFFFF;
-	font-weight: 600;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 48px;
+  line-height: 46px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #8B8B8B;
 }
-
-input[type=text]:focus
-{
-	border: 1px solid rgba(255,53,109,1);
-}
-
-.test
-{
-	width: 700px;
-	height: 350px;
-	background-image: url(https://www.transparenttextures.com/patterns/escheresque.png), linear-gradient(to top, #f77062 0%, #fe5196 100%);
-	background-blend-mode: overlay;
-}
-
-.f-w { width: 100%; }

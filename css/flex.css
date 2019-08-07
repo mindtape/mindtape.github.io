@@ -1,14 +1,14 @@
-.grid            { display: flex; flex-wrap: wrap; }
-.grid.\-top      { align-items: flex-start; }
-.grid.\-middle   { align-items: center; }
-.grid.\-bottom   { align-items: flex-end; }
-.grid.\-stretch  { align-items: stretch; }
-.grid.\-baseline { align-items: baseline; }
-.grid.\-left     { justify-content: flex-start; }
-.grid.\-center   { justify-content: center; }
-.grid.\-right    { justify-content: flex-end; }
-.grid.\-between  { justify-content: space-between; }
-.grid.\-around   { justify-content: space-around; }
+.flex            { display: flex; flex-wrap: wrap; }
+.flex.\-top      { align-items: flex-start; }
+.flex.\-middle   { align-items: center; }
+.flex.\-bottom   { align-items: flex-end; }
+.flex.\-stretch  { align-items: stretch; }
+.flex.\-baseline { align-items: baseline; }
+.flex.\-left     { justify-content: flex-start; }
+.flex.\-center   { justify-content: center; }
+.flex.\-right    { justify-content: flex-end; }
+.flex.\-between  { justify-content: space-between; }
+.flex.\-around   { justify-content: space-around; }
 
 .cell            { box-sizing: border-box; flex-shrink: 0; }
 .cell.\-fill     { width: 0; min-width: 0; flex-grow: 1; }
