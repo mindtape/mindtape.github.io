@@ -32,18 +32,71 @@
 .gist { width: 800px; margin-top: 20px; }
 /* ONLY FOR GISTS - REMOVE IN PRODUCTION VERSION */
 
+
 /* DEBUG ONLY - REMOVE IN PRODUCTION VERSION */
-body
-{
-  padding: 20px 100px;
+/* DEBUG ONLY - REMOVE IN PRODUCTION VERSION */
+
+* {
+  margin: 0;
+  padding: 0;
 }
-/* DEBUG ONLY - REMOVE IN PRODUCTION VERSION */
+html,
+body {
+  height: 100%;
+}
 
 body	
 {
   font-family: 'Montserrat';
   font-size: 12pt;
   color: #464555;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  flex: 1 1 auto;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.footer {
+  flex: 0 0 auto;
+  height: 60px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border-radius: 20px 20px 0 0;
+  -webkit-box-shadow: 0px 0px 20px -10px rgba(171,169,188,1);
+  -moz-box-shadow: 0px 0px 20px -10px rgba(171,169,188,1);
+  box-shadow: 0px 0px 20px -10px rgba(171,169,188,1);
+  height: 60px;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.footer i 
+{
+  font-size: 16pt;
+  color: #BDBAC4;
+  margin-right: 35px;
+}
+
+.footer i:last-child
+{
+  margin: 0;
+}
+
+.active 
+{
+  color: #21D4FD;
+background-image: linear-gradient(45deg, #21D4FD 0%, #B721FF 100%);
+
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Buttons */
@@ -91,6 +144,7 @@ body
   -moz-box-shadow: 0px 0px 20px -10px rgba(171,169,188,1);
   box-shadow: 0px 0px 20px -10px rgba(171,169,188,1);
   padding: 20px;
+  margin-bottom: 10px;
 }
 
 .card h1 
@@ -100,6 +154,8 @@ body
   font-weight: 500;
   font-size: 16pt;
 }
+
+/* Lists */
 
 .list
 {
@@ -113,6 +169,7 @@ body
   height: 48px;
   line-height: 47px;
   padding: 0 10px;
+  white-space: nowrap;
 }
 
 /* Forms */
@@ -148,66 +205,8 @@ input[type=text],[type=password]
   border-radius: 10px;
 }
 
- /* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 20px;
-}
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 2px;
-  bottom: 2px;
-
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #1563FF;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(29px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 10px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-} 
+/* Additional */
+.p-r {text-align: right;} /* Pull right */
+.p-l {text-align: left;} /* Pull right */
+.f-w {width: 100%;} /* Full width */
