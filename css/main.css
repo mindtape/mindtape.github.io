@@ -183,6 +183,7 @@ body
   line-height: 54px;
   padding: 0 15px;
   white-space: nowrap;
+  overflow-x: hidden;
 }
 
 .list-title
