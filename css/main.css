@@ -75,14 +75,12 @@ body
   flex: 1 1 auto;
   overflow: auto;
   box-sizing: border-box;
-  padding: 5px;
 }
 .footer {
   flex: 0 0 auto;
   height: 60px;
   box-sizing: border-box;
   background: #FFFFFF;
-  border-radius: 20px 20px 0 0;
   -webkit-box-shadow: 0px 0px 20px -10px rgba(171,169,188,1);
   -moz-box-shadow: 0px 0px 20px -10px rgba(171,169,188,1);
   box-shadow: 0px 0px 20px -10px rgba(171,169,188,1);
@@ -129,6 +127,8 @@ body
   line-height: 48px;
   border-radius: 5px;
   padding: 0 40px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .outline
@@ -181,7 +181,7 @@ body
   border-bottom: 1px solid #EEEEEE;
   height: 55px;
   line-height: 54px;
-  padding: 0 10px;
+  padding: 0 15px;
   white-space: nowrap;
 }
 
@@ -193,7 +193,7 @@ body
   text-transform: uppercase;
   font-size: 8pt;
   font-weight: 700;
-  padding: 0 10px;
+  padding: 0 15px;
 }
 
 /* Forms */
