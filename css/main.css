@@ -48,6 +48,19 @@
 /* DEBUG ONLY - REMOVE IN PRODUCTION VERSION */
 /* DEBUG ONLY - REMOVE IN PRODUCTION VERSION */
 
+.map
+{
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.map iframe
+{
+  box-sizing: border-box;
+  width: 100%;
+  height: 300px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -93,7 +106,7 @@ body
 {
   font-size: 16pt;
   color: #BDBAC4;
-  margin-right: 35px;
+  margin-right: 40px;
 }
 
 .footer i:last-child
