@@ -1,0 +1,82 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+
+body { 
+	font-family: 'Arimo', sans-serif; 
+	background: url(https://www.transparenttextures.com/patterns/green-gobbler.png), linear-gradient(45deg,  #d4145a 0%,#fbb03b 100%);
+	background-blend-mode: overlay;
+	color: #FFFFFF;
+	font-size: 12pt;
+}
+
+.container
+{
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+}
+
+.lp-additional-bottom
+{
+	opacity: 0.9;
+	font-size: 11pt;
+}
+
+.lp-additional-bottom a
+{
+	text-decoration: none;
+	color: #FFFFFF;
+	border-bottom: 1px dashed #FFFFFF;
+}
+
+.lp-input
+{
+	display: block;
+	width: 100%;
+	outline: 0;
+	border: 0;
+	height: 48px;
+	line-height: 48px;
+	border: 1px solid #EEEEEE;
+	border-top: 0;
+	padding: 0 20px;
+	font-family: 'Arimo', sans-serif; 
+	font-size: 11pt;
+
+}
+
+.lp-input:first-child
+{
+	margin-top: 20px;
+	border-radius: 5px 5px 0 0;
+	border-top: 1px solid #EEEEEE;
+}
+
+.lp-input:last-child
+{
+	border-radius: 0 0 5px 5px;
+}
+
+.lp-button
+{
+	font-family: 'Arimo', sans-serif; 
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
+	outline: 0;
+	border: 0;
+	background: #FFFFFF;
+	border-radius: 5px;
+	color: #d4145a;
+	font-weight: 600;
+	
+	font-size: 10pt;
+	margin: 10px 0;
+}
+
+.lp-logo
+{
+	font-family: 'Unna', serif;
+	font-size: 32pt;
+	margin: 0 0 50px 0;
+}
