@@ -1,250 +1,93 @@
-/* montserrat-regular - latin_cyrillic */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Montserrat Regular'), local('Montserrat-Regular'),
-       url('fonts/montserrat-v14-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/montserrat-v14-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* montserrat-500 - latin_cyrillic */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Montserrat Medium'), local('Montserrat-Medium'),
-       url('fonts/montserrat-v14-latin_cyrillic-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/montserrat-v14-latin_cyrillic-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* montserrat-600 - latin_cyrillic */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
-       url('fonts/montserrat-v14-latin_cyrillic-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/montserrat-v14-latin_cyrillic-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* montserrat-700 - latin_cyrillic */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Montserrat Bold'), local('Montserrat-Bold'),
-       url('fonts/montserrat-v14-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/montserrat-v14-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-
-
-/* ONLY FOR GISTS - REMOVE IN PRODUCTION VERSION */
-.gist { width: 800px; margin-top: 20px; }
-/* ONLY FOR GISTS - REMOVE IN PRODUCTION VERSION */
-
-
-/* DEBUG ONLY - REMOVE IN PRODUCTION VERSION */
-/* DEBUG ONLY - REMOVE IN PRODUCTION VERSION */
-
-.map
+body
 {
-  box-sizing: border-box;
-  width: 100%;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12pt;
+	color: #FFFFFF;
+	margin: 0;
+	padding: 0;
 }
 
-.map iframe
+.container
 {
-  box-sizing: border-box;
-  width: 100%;
-  height: 300px;
+	width: 100%;
+	padding: 20px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-html,
-body {
-  height: 100%;
-}
-
-body	
+.button
 {
-  font-family: 'Montserrat';
-  font-size: 12pt;
-  color: #464555;
-  font-weight: 500;
+	box-sizing: border-box;
+	transition: 0.5s;
+	display: inline-block;
+	background: rgba(255,53,109,1);
+	font-weight: bold;
+	height: 48px;
+	line-height: 48px;
+	padding: 0 20px;
+	text-decoration: none;
+	color: #FFFFFF;
+	border-radius: 5px;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-.content {
-  flex: 1 1 auto;
-  overflow: auto;
-  box-sizing: border-box;
-}
-.footer {
-  flex: 0 0 auto;
-  height: 60px;
-  box-sizing: border-box;
-  background: #FFFFFF;
-  -webkit-box-shadow: 0px 0px 20px -10px rgba(171,169,188,1);
-  -moz-box-shadow: 0px 0px 20px -10px rgba(171,169,188,1);
-  box-shadow: 0px 0px 20px -10px rgba(171,169,188,1);
-  height: 60px;
-  padding: 20px 20px;
-  text-align: center;
-}
-
-.footer i 
+.button:hover
 {
-  font-size: 16pt;
-  color: #BDBAC4;
-  margin-right: 40px;
+	background: #0000FF;
 }
 
-.footer i:last-child
+.outline {
+	line-height: 44px;
+	background: #FFFFFF;
+	border: 2px solid #0055FF;
+	color: #0055FF;
+}
+
+.outline:hover {
+	background: #0055FF;
+	color: #FFFFFF;
+}
+
+input[type=text]
 {
-  margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	box-sizing: border-box;
+	font-size: 12pt;
+	border: none;
+	border: 1px solid #f1f1f1;
+	color: rgba(3,27,78,.7);
+	border-radius: 5px;
+	height: 48px;
+	line-height: 48px;
+	padding: 0 15px;
+	margin-bottom: 10px;
+	background: #FFFFFF;
+	font-weight: 600;
 }
 
-.active 
+input[type=text]:focus
 {
-  color: #21D4FD;
-  background: linear-gradient(135deg,#70F570,#07F7F7);
-
-    -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+	border: 1px solid rgba(255,53,109,1);
 }
 
-/* Buttons */
-
-.button, button
+.test
 {
-  font-family: 'Montserrat';
-  outline: 0;
-  border: 0;
-  display: inline-block;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-weight: 600;
-  background: #1563FF;
-  color: #FFFFFF;
-  height: 48px;
-  line-height: 48px;
-  border-radius: 5px;
-  padding: 0 40px;
-  margin-bottom: 10px;
-  text-align: center;
+	width: 700px;
+	height: 350px;
+	background-image: url(https://www.transparenttextures.com/patterns/escheresque.png), linear-gradient(to top, #f77062 0%, #fe5196 100%);
+	background-blend-mode: overlay;
 }
 
-.outline
+.f-w { width: 100%; }
+
+.header {
+	box-sizing: border-box;
+	height: 200px;
+	background-image: url(https://www.transparenttextures.com/patterns/climpek.png), linear-gradient( 234.1deg,  rgba(199,45,143,1) 16.8%, rgba(249,154,73,1) 75.2% );
+	background-blend-mode: overlay;
+}
+
+.layer
 {
-  background: #FFFFFF;
-  color: #1563FF;
-  border: 1px solid #1563FF;
-  line-height: 46px;
-  padding: 0 39px;
+	box-sizing: border-box;
+	height: 200px;
+	background: black;
+	position: relative;
 }
-
-.light 
-{
-  color: #8B8B8B;
-  border: 1px solid #8B8B8B;
-}
-
-/* Cards */
-
-.card 
-{
-  box-sizing: border-box;
-  background: #FFFFFF;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 20px -10px rgba(171,169,188,1);
-  -moz-box-shadow: 0px 0px 20px -10px rgba(171,169,188,1);
-  box-shadow: 0px 0px 20px -10px rgba(171,169,188,1);
-  padding: 20px;
-  margin-bottom: 10px;
-}
-
-.card h1 
-{ 
-  padding: 0;
-  margin: 0;
-  font-weight: 500;
-  font-size: 16pt;
-}
-
-/* Lists */
-
-.list
-{
-  box-sizing: border-box;
-  background: #FFFFFF;
-}
-
-.list-item
-{
-  border-bottom: 1px solid #EEEEEE;
-  height: 55px;
-  line-height: 54px;
-  padding: 0 15px;
-  white-space: nowrap;
-  overflow-x: hidden;
-}
-
-.list-title
-{
-  background: #EEEEEE;
-  height: 20px;
-  line-height: 20px;
-  text-transform: uppercase;
-  font-size: 8pt;
-  font-weight: 700;
-  padding: 0 15px;
-}
-
-/* Forms */
-input[type=text],[type=password]
-{
-  box-sizing: border-box;
-  display: inline-block;
-  height: 48px;
-  line-height: 46px;
-  padding: 0 10px;
-  border-radius: 5px;
-  border: 1px solid #aba9bc;
-  color: #464555;
-}
-
-::placeholder
-{
-  color: #464555;
-}
-
-/* Notifications */
-
-.notification-bage
-{
-  display: inline-block;
-  background: #F80046;
-  color: #FFFFFF;
-  font-weight: 600;
-  font-size: 11pt;
-  height: 20px;
-  line-height: 20px;
-  padding: 0 10px;
-  border-radius: 10px;
-}
-
-
-/* Additional */
-.p-r {text-align: right;} /* Pull right */
-.p-l {text-align: left;} /* Pull right */
-.f-w {width: 100%;} /* Full width */

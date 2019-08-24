@@ -2,160 +2,31 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preload" as="font" type="font/woff2" href="css/fonts/montserrat-v14-cyrillic_latin-regular.woff2" crossorigin>
-	<link rel="preload" as="font" type="font/woff2" href="css/fonts/montserrat-v14-cyrillic_latin-600.woff2" crossorigin>
-	<link rel="preload" as="font" type="font/woff2" href="css/fonts/montserrat-v14-cyrillic_latin-700.woff2" crossorigin>
-	<link rel="preload" as="style" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/flex.css">
-	<link rel="stylesheet" type="text/css" href="css/normalize.min.css">
-	<script src="https://kit.fontawesome.com/ab6b043a8e.js"></script>
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-  crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-  integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-  crossorigin=""></script>
-	<title></title>
-	    <style>
-      /* Set the size of the div element that contains the map */
-      #map {
-        height: 400px;  /* The height is 400 pixels */
-        width: 100%;  /* The width is the width of the web page */
-       }
-    </style>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/grid.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="motion.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet"> 
 </head>
 <body>
-	<div class="wrapper">
-		<div class="content">
-			<div id="map"></div>
-  <script>
-   var map = L.map('map').setView([53.27538, 69.41178], 17);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+	<div class="login-container">
+		<div class="login-box">
+			<div class="info">
+							<h1>Healthy</h1>
 
-L.marker([53.27538, 69.41178]).addTo(map)
-    .bindPopup('ГККП "Кокчетавский филиал Алексеевского психоневрологического областного диспансера"')
-    .openPopup();
-  </script>
-
-			<div class="list">
-				<div class="list-item flex">
-					<div class="cell -6of12">Уведомления</div>
-					<div class="cell -6of12 p-r"><div class="notification-bage">228</div></div>
-				</div>
-				<div class="list-title">
-					Основное
-				</div>
-				<div class="list-item flex">
-					<div class="cell -6of12">Тупа отдохунть</div>
-					<div class="cell -6of12 p-r"><i class="fas fa-chevron-right"></i></div>
-				</div>
-				<div class="list-item flex">
-					<div class="cell -6of12">Заказать девочек</div>
-					<div class="cell -6of12 p-r"><i class="fas fa-chevron-right"></i></div>
-				</div>
-				<div class="list-title">
-					Невозможное 
-				</div>
-				<div class="list-item flex">
-					<div class="cell -6of12">Выйти из тильта (недоступно)</div>
-					<div class="cell -6of12 p-r"><i class="fas fa-times"></i></div>
-				</div>
-				<div class="list-title">
-					Обязательное
-				</div>
-				<div class="list-item flex">
-					<div class="cell -6of12">Работать без выходных</div>
-					<div class="cell -6of12 p-r"><i class="fas fa-chevron-right"></i></div>
-				</div>
-				<div class="list-item flex">
-					<div class="cell -6of12">Получить повiстку</div>
-					<div class="cell -6of12 p-r"><i class="fas fa-chevron-right"></i></div>
-				</div>
-				<div class="list-item flex">
-					<div class="cell -6of12">Поздороваться со сковородой</div>
-					<div class="cell -6of12 p-r"><i class="fas fa-chevron-right"></i></div>
-				</div>
-				<div class="list-item flex">
-					<div class="cell -6of12">Купить Chapman</div>
-					<div class="cell -6of12 p-r"><i class="fas fa-chevron-right"></i></div>
-				</div>
-				<div class="list-item flex">
-					<div class="cell -6of12">Купить химозы у тетки рекламщицы</div>
-					<div class="cell -6of12 p-r"><i class="fas fa-chevron-right"></i></div>
-				</div>
-				<div class="list-item flex">
-					<div class="cell -6of12">Тильтануть</div>
-					<div class="cell -6of12 p-r"><i class="fas fa-chevron-right"></i></div>
-				</div>
-				<div class="list-title">
-					Для путевки в Алексеевку
-				</div>
-								<div class="list-item flex">
-					<div class="cell -6of12">Завести вымышленного друга</div>
-					<div class="cell -6of12 p-r"><i class="fas fa-chevron-right"></i></div>
-				</div>
-								<div class="list-item flex">
-					<div class="cell -6of12">Флексить на публике</div>
-					<div class="cell -6of12 p-r"><i class="fas fa-chevron-right"></i></div>
-				</div>
-								<div class="list-item flex">
-					<div class="cell -6of12">Не носить футболки</div>
-					<div class="cell -6of12 p-r"><i class="fas fa-chevron-right"></i></div>
-				</div>
-								<div class="list-item flex">
-					<div class="cell -6of12">Залезть на лавочку</div>
-					<div class="cell -6of12 p-r"><i class="fas fa-chevron-right"></i></div>
-				</div>
-								<div class="list-item flex">
-					<div class="cell -6of12">Рандомные слова из песен</div>
-					<div class="cell -6of12 p-r"><i class="fas fa-chevron-right"></i></div>
-				</div>
-				<div class="list-item flex">
-					<div class="cell -6of12">Неконкретика</div>
-					<div class="cell -6of12 p-r"><i class="fas fa-chevron-right"></i></div>
-				</div>
 			</div>
-			<br>
-
-			<div class="card">
-				<a class="button f-w">Включить музыку</a><br>
-				<a class="button outline f-w">Пофлексить</a><br>
-				<a class="button outline light f-w">Уехать в Алексеевку</a><br>
-				<h1>Test</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<img src="https://pbs.twimg.com/media/DstgOGVW0AAzHpG.jpg" width="100%">
-			</div>
-			<div class="card">
-				<h1>Test</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</div>
-			<div class="card">
-				<h1>Test</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</div>
-			<div class="card">
-				<h1>Test</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</div>
-			<div class="card">
-				<h1>Test</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</div>
-		</div>
-		<div class="footer">
-			<i class="fas fa-store active"></i>
-			<i class="fas fa-users"></i>
 			
-			<i class="fas fa-map-marker-alt"></i>
-			<i class="fas fa-sliders-h"></i>
-			<i class="fas fa-user"></i>
+			<input type="text" name="" placeholder="Электронный адрес" class="f-w purple">
+			<input type="text" name="" placeholder="Пароль" class="f-w purple">
+			<a href="test.html" class="button puple f-w ">Регистрация</a>
+			<p>Уже есть аккаунт ProID?</p>
+			<a href="#modal" class="button outline purple-outline f-w">Войти</a>
 		</div>
+		<div class="copy">
+			2019. Моя новелла. Музыке мало тела. В танце ты холодела. Тебе не надоело?
+		</div>	
 	</div>
 
 
