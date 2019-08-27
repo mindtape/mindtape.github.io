@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="jquery.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="grid -center">
+		<div class="cell -3of12">
+			<div class="grid -between tower">
+				<div class="cell -12of12 tower-head green">8</div>
+				<div class="cell -6of12"><div class="cube yellow">4</div></div>
+				<div class="cell -6of12"><div class="cube blank" id="9-answ"></div></div>
+
+				<div class="cell -6of12"><div class="cube blank" id="12-answ"></div></div>
+				<div class="cell -6of12"><div class="cube red">2</div></div>
+
+				<div class="cell -6of12"><div class="cube blue">1</div></div>
+				<div class="cell -6of12"><div class="cube blank" id="7-answ"></div></div>
+
+				<div class="cell -6of12"><div class="cube yellow">3</div></div>
+				<div class="cell -6of12"><div class="cube blank" id="11-answ"></div></div>
+
+				<div class="cell -6of12"><div class="cube blank" id="10-answ"></div></div>
+				<div class="cell -6of12"><div class="cube green">6</div></div>
+
+				<div class="cell -6of12"><div class="cube purple">5</div></div>
+				<div class="cell -6of12"><div class="cube blank" id="8-answ"></div></div>
+			</div>
+		</div>
+		<div class="cell -6of12">
+			<p>Состав числа</p>
+			<div id="button-check"><p><button onclick="check();">Проверить</button></p></div>
+			<div id="button-repeat" style="display:none;"><p><button onclick="location.reload();" >Еще раз</button></p></div>
+			<div class="grid">
+				<div class="cell -6of12">
+						<div class="cube purple" id="7">7</div>
+			<div class="cube red" id="8">3</div>
+			<div class="cube blue" id="9">4</div>
+			<div class="cube yellow" id="10">2</div>
+			<div class="cube purple" id="11">5</div>
+			<div class="cube green" id="12">6</div>
+				</div>
+				<div class="cell -6of12">
+						<div class="cube red" id="1">2</div>
+			<div class="cube green" id="2">5</div>
+			<div class="cube blue" id="3">7</div>
+			<div class="cube purple" id="4">1</div>
+			<div class="cube yellow" id="5">3</div>
+			<div class="cube green" id="6">4</div>
+				</div>
+			</div>
+		
+
+		
+		</div>
+		<div class="cell -2of12">
+			<div class="grid -between tower">
+				<div class="cell -12of12 tower-head red">9</div>
+				<div class="cell -6of12"><div class="cube yellow">2</div></div>
+				<div class="cell -6of12"><div class="cube blank" id="3-answ"></div></div>
+
+				<div class="cell -6of12"><div class="cube blank" id="6-answ"></div></div>
+				<div class="cell -6of12"><div class="cube green">5</div></div>
+
+				<div class="cell -6of12"><div class="cube blank" id="5-answ"></div></div>
+				<div class="cell -6of12"><div class="cube blue">6</div></div>
+
+				<div class="cell -6of12"><div class="cube yellow">8</div></div>
+				<div class="cell -6of12"><div class="cube blank" id="4-answ"></div></div>
+
+				<div class="cell -6of12"><div class="cube blank" id="2-answ"></div></div>
+				<div class="cell -6of12"><div class="cube">4</div></div>
+
+				<div class="cell -6of12"><div class="cube purple">7</div></div>
+				<div class="cell -6of12"><div class="cube blank" id="1-answ"></div></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		
+
+		for (let i = 1; i < 13; i++) { $('#'+i+'').draggable(); }
+		
+		function check()
+		{
+			let right_answers = 0;	
+			for (let i = 1; i < 13; i++) {
+				console.warn('Проверяем элемент № ' + i);
+				let el_position = $('#'+i+'').position();
+				let right_position = $('#'+i+'-answ').position();
+				if(el_position.top < right_position.top-10 || el_position.top > right_position.top+10 || el_position.left < right_position.left-10 || el_position.left > right_position.left+10)
+				{
+					console.error('Элемент установлен неверно');
+				}
+				else 
+				{ 
+					console.log('%c Элемент установлен верно! ', 'width:100%; background: #0F9A4F; color: #ffffff'); 
+					right_answers++;
+				}
+			  // если true, пропустить оставшуюся часть тела цикла
+			 // if (i % 2 == 0) continue;
+
+			 	
+			}
+			console.log('Правильных ответов: ' + right_answers);
+			if(right_answers == 12)
+			{
+				var repeatGame = confirm("Все правильно! Сыграть еще раз?");
+				if(repeatGame) location.reload();
+			}
+			else
+			{
+				alert('Не правильно!');
+			}
+			/*
+			var el_2_7 = $('#2-7').position();
+			var test = el_2_7.top+10;
+			console.log('Позиция элемента 2-7, top: ' + el_2_7.top + ', +10 - '+ test +', left: ' + el_2_7.left);
+			var hel_2_7 = $('#2-7-here').position();
+			console.log('Приоритет 2-7, top: ' + hel_2_7.top + ', left: ' + hel_2_7.left);
+			//TOP 558 LEFT 840 
+			if(el_2_7.top < (el_2_7.top-10) || el_2_7.top > (el_2_7.top+10) || el_2_7.left < (el_2_7.left-10) || el_2_7.left > (el_2_7.left+10)) 
+			{ 
+				console.error('Элемент не на позиции.'); 
+				$("#wrong-answ").css("display", "block"); 
+				$("#right-answ").css("display", "none"); 
+			}
+			else 
+			{ 
+				console.warn('Элемен стоит на позиции'); 
+				$("#wrong-answ").css("display", "none"); 
+				$("#right-answ").css("display", "block"); 
+			} */
+		}
+	</script>
+</body>
+</html>

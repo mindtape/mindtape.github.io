@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="jquery.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<button onclick="check();">Проверить</button><br><br>
+	<div class="grid">
+
+		<div class="cell -6of12">
+			<img src="ball-5.png" id="3">
+			<img src="ball-1.png" id="1">
+			
+			<img src="ball-8.png" id="5">
+			
+			<img src="ball-6.png" id="4">
+			<img src="ball-2.png" id="2">
+			
+		</div>
+		<div class="cell -6of12">
+			<img src="num-8.png" id="5-answ" class="snapable">
+			<img src="num-1.png" id="1-answ" class="snapable">
+			<img src="num-6.png" id="4-answ" class="snapable">
+			<img src="num-2.png" id="2-answ" class="snapable">
+			<img src="num-5.png" id="3-answ" class="snapable">
+		</div>
+	</div>
+	<script type="text/javascript">
+		function randomInteger(min, max) {
+		  // получить случайное число от (min-0.5) до (max+0.5)
+		  let rand = min - 0.5 + Math.random() * (max - min + 1);
+		  return Math.round(rand);
+		}
+		for (let i = 1; i < 6; i++) { 
+			$('#'+i+'').draggable({ snap: '.snapable', snapMode: "outer" }); 
+			let randTop = randomInteger(20, 40);
+			let randLeft = randomInteger(20, 760);
+			$('#'+i+'').css({"top":""+randTop+"px", "left":""+randLeft+"px"})
+		}
+		for (let i = 1; i < 6; i++) { 
+			$('#'+i+'-answ').draggable();
+			let randTop = randomInteger(20, 40);
+			let randLeft = randomInteger(20, 760);
+			$('#'+i+'-answ').css({"top":""+randTop+"px", "left":""+randLeft+"px"})
+		}
+		function check()
+		{
+			let right_answers;
+			right_answers = 0;
+			for (let i = 1; i < 6; i++) 
+			{
+				console.error('Элемент №' + i);
+				let el_position = $('#'+i+'').position();
+				let right_position = $('#'+i+'-answ').position();
+				console.warn('TOP: ' + el_position.top + '(' + right_position.top + '), LEFT: ' + el_position.left + '(' + right_position.left + ')');
+				if(el_position.top < right_position.top-10 || el_position.top > right_position.top+10 || el_position.left < right_position.left-150 || el_position.left > right_position.left+10)
+				{
+					console.error('Не верно');
+				
+				}
+				else 
+					{ 
+						right_answers++;
+						console.warn('Верно'); 
+					}
+			}
+			if(right_answers == 5)
+			{
+				var repeatGame = confirm("Все правильно! Сыграть еще раз?");
+				if(repeatGame) location.reload();
+			}
+			else { alert('Не правильно!'); } 
+		}
+	</script>
+</body>
+</html>
