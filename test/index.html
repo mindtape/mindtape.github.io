@@ -3,16 +3,88 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<button onclick="driverOnTheWay();">Подъехать</button>
-<script type="text/javascript">
-	function driverOnTheWay()
-	{
-		console.warn('Проигрываем аудио...');
-		var audio = new Audio('iscoming.ogg');
-		audio.play();
-	}
-</script>
+	<p>Прослушайте аудиозапись и выберите цифру</p><br>
+	<button onclick="playAudio();">Начать</button><br><br>
+	<button onclick="repeat();">Повторить число</button><br><br>
+	<button onclick="stop();">Закончить</button><br><br>
+	<div class="item" onclick="selectItem(0);">0</div>
+	<div class="item" onclick="selectItem(1);">1</div>
+	<div class="item" onclick="selectItem(2);">2</div>
+	<div class="item" onclick="selectItem(3);">3</div>
+	<div class="item" onclick="selectItem(4);">4</div>
+	<div class="item" onclick="selectItem(5);">5</div>
+	<div class="item" onclick="selectItem(6);">6</div>
+	<div class="item" onclick="selectItem(7);">7</div>
+	<div class="item" onclick="selectItem(8);">8</div>
+	<div class="item" onclick="selectItem(9);">9</div>
+	<script type="text/javascript">
+		let right = 0;
+		let wrong = 0;
+		function randomInteger(min, max) {
+		  	let rand = min - 0.5 + Math.random() * (max - min + 1);
+		  	return Math.round(rand);
+		}
+		console.log('Генерируем рандомное число...');
+		let audioNumber = randomInteger(0, 9);
+		console.log(typeof(audioNumber));
+		console.info(audioNumber);
+		
+		function playAudio() {
+			console.warn('Проигрываем аудио: voices/c/'+ audioNumber +'.ogg');
+			let audio = new Audio('sounds/start.ogg');
+			audio.play();
+
+			audio.onended = function() {
+				new Audio('voices/c/'+ audioNumber +'.ogg').play();
+			}
+			
+
+			/*
+		  	let audio = new Audio('voices/c/'+ trackNumber +'.ogg');
+			audio.play();
+			*/
+		}
+
+		function selectItem(itemNumber)
+		{
+			if(itemNumber == audioNumber)
+			{
+				console.info('Выбрано правильно. Генерируем новое число');
+				audioNumber = randomInteger(0, 9);
+				new Audio('voices/c/'+ audioNumber +'.ogg').play()
+				console.warn(audioNumber);
+				right++;
+			}
+			else 
+			{ 
+				console.error('Выбрано не то число');
+				wrong++;
+				let audio = new Audio('sounds/wrong.ogg');
+				audio.play();
+
+				audio.onended = function() {
+					new Audio('voices/c/'+ itemNumber +'.ogg').play();
+				}
+			}
+		}
+
+		function stop()
+		{
+			let rightPercent = (right*100)/(right+wrong);
+			alert('Игра окончена. Правильных ответов: '+ right +' ('+rightPercent+'%), неправильных: ' + wrong);
+		}
+
+		function repeat()
+		{
+			new Audio('voices/c/'+ audioNumber +'.ogg').play();	
+		}
+
+		
+
+		
+	</script>
 </body>
 </html>
