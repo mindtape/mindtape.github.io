@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/touch.js"></script>
+	<script type="text/javascript" src="js/notiflix-1.8.0.min.js"></script>
+	<script type="text/javascript" src="js/game.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/notiflix-1.8.0.min.css">
+</head>
+<body>
+		<div class="modal">
+		<div class="modal-content">
+			<img src="img/3.png">
+			<p>Начать игру?</p>
+			<button class="start-game-button" onclick="startGame();">Старт</button>
+		</div>
+	</div>
+	<div class="grid -between main-container mgrd">
+		<div class="cell -4of12 numerical">
+			<div class="item-block">
+			<div class="item" onclick="isPressed(1);">1</div>
+			<div class="item" onclick="isPressed(2);">2</div>
+			<div class="item" onclick="isPressed(3);">3</div>
+			<div class="item" onclick="isPressed(4);">4</div>
+			<div class="item" onclick="isPressed(5);">5</div>
+			<div class="item" onclick="isPressed(6);">6</div>
+			<div class="item" onclick="isPressed(7);">7</div>
+			<div class="item" onclick="isPressed(8);">8</div>
+			<div class="item" onclick="isPressed(9);">9</div>
+			<div class="item">*</div>
+			<div class="item" onclick="isPressed(0);">0</div>
+			<div class="item">#</div>
+			</div>
+
+		</div>
+		<div class="cell topcell">
+			<div class="grid">
+				<div class="cell -6of12">
+							<div class="safe-box">
+						<div class="safe">
+							<center><img src="img/safe.png" width="70%"></center>
+							<div class="code-place">
+								<p>Код:</p>
+								<div id="code"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cell -6of12">
+					<center><img class="minion" src="img/5.png"></center>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
