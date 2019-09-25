@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+	<input type="text" name="name" placeholder="Имя">
+	<input type="tel" name="phone" placeholder="Номер телефона">
+	<button onclick="enter();">Выполнить тестовый вход</button>
+	<script type="text/javascript">
+		function enter()
+		{
+			let user = {   
+			  name: $("input[name=name]").val(),
+			  phone: $("input[name=phone]").val(),      
+			  driver: false,      
+			};
+			console.log(user);
+			localStorage.setItem("loginStatus", true);
+			localStorage.setItem("userData", JSON.stringify(user));
+			console.log(localStorage.getItem("userData"));
+			window.location.replace("index.html");
+		}
+	</script>
+</body>
+</html>
