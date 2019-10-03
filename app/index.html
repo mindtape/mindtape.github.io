@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<title>Авторизация</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery.dev.js"></script>
+</head>
+<body>
+	<div class="modal-bg">
+		<div class="modal-box">
+			<p id="modal-text">Тест</p>
+			<div class="modal-control">
+				<a id="#action_1" href="javascript:void(0);" onclick="closeModal();">Закрыть</a>
+				<a id="#action_2" href="javascript:void(0);" onclick="modalAction();">Повтор</a>
+			</div>
+		</div>
+
+	</div>
+	<div class="container">
+		<div class="greetings">
+			<h1>Добро пожаловать!</h1>
+			<p>Чтобы продолжить, введите ваш номер телефона и пароль.</p>
+		</div>
+		<div class="input-wrapper"><label>Номер телефона</label><input class="f-w input-with-label" type="tel" name="" placeholder="+7 (777) 123 4567"></div>
+		<div class="input-wrapper"><label>Пароль</label><input class="f-w input-with-label" type="password" name="" placeholder="********"></div>
+		
+		
+		<button class="f-w">Продолжить</button>
+		<p class="additional">Нажимая продолжить, Вы соглашаетесь с <a href="">условиями пользования</a> и <a href="">политикой конфиденциальности</a>.</p>	
+	</div>
+	<script type="text/javascript">
+		function closeModal()
+		{
+			$(".modal-bg").hide();	
+			return true;
+		}
+		function modalAction()
+		{
+			$(".modal-bg").hide();	
+			return true;
+		}
+
+		$.get( "https://api.github.com/gists/09b88eb12da9d86cc93b4e98e65deb0f", function( data ) {
+		  console.warn(data);
+		  $("#modal-text").text("Неправильный логин или пароль");
+		  $(".modal-bg").show();
+		});
+	</script>
+</body>
+</html>
