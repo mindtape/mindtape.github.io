@@ -2,9 +2,10 @@
 html, body { height: 100%; }
 body
 {
-	color: #1B2733;
+	color: #3d464d;
 	font-family: Arial;
 	font-size: 11pt;
+	user-select: none;
 }
 .container
 {
@@ -23,6 +24,8 @@ body
 	line-height: 45px;
 	border: 1px solid #bdc4c9;
 	padding: 0 20px;
+	font-family: Arial;
+	font-size: 11pt;
 }
 
 label
@@ -36,6 +39,28 @@ label
 .labeled-input
 {
 	margin: 10px 0;
+}
+
+.input-pre-ad
+{
+	display: flex;
+}
+
+.ad 
+{
+	flex-shrink: 0; 
+	width: 50px; 
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	border: 1px solid #bdc4c9;
+	border-right: 0;
+	background: #ffffff;
+}
+
+.input-pre-ad .input
+{
+	flex-grow: 1;
 }
 
 /*-------------------------------------------------*/
@@ -59,3 +84,4 @@ label
 a { text-decoration: none; color: #005ff8; }
 .privacy-policy { color: #637282; text-align: center; margin-top: 20px; }
 .logo { margin: 10vh 0; }
+.start-info { margin: 15px 0; }

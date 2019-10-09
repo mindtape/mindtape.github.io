@@ -8,17 +8,39 @@
 </head>
 <body>
 	<div class="container">
-		<center><img src="img/logo.png" width="60%" class="logo"></center>
+		<br><br><br><br><br>
 		<h1>Добро пожаловать!</h1>
-		<p>Чтобы начать пользоваться сервисом, введите Ваше имя и номер телефона.</p>
+		<p class="start-info">Чтобы начать пользоваться сервисом, введите Ваше имя и номер телефона.</p>
 		<div class="labeled-input"><label>Имя</label><input type="text" name="" class="input fw"></div>
-		<div class="labeled-input"><label>Номер телефона</label><input type="text" name="" class="input fw"></div>
-		
-		
-		
-		
+		<div class="labeled-input">
+			<label>Номер телефона</label>
+			<div class="input-pre-ad">
+				<div class="ad">+7</div>
+				<input type="tel" name="phone" class="input fw" id="phone-input" maxlength="10">
+			</div>
+		</div>
 		<a href="" class="button fw">Продолжить</a>
 		<p class="privacy-policy">Нажимая продолжить, вы соглашаетесь с нашей <a href="">политикой конфиденциальности</a></p>
 	</div>
+	<script type="text/javascript">
+		/*
+		var input = document.getElementById('phone-input');
+		console.log(input);
+
+  		input.oninput = function() {
+  			//alert(input.textLength);
+  			if(input.textLength == 3)
+  			{
+  				input.value = '('+input.value+') ';
+  			}
+
+  			if(input.textLength == 9)
+  			{
+  				input.value = input.value+' ';
+  			}
+    		//document.getElementById('result').innerHTML = input.value;
+  		};
+  		*/
+	</script>
 </body>
 </html>
