@@ -24,17 +24,25 @@
 			</div>
 		</div>
 	<script type="text/javascript">
-		var height = $(window).height();
-		function checkUser()
-		{
-			console.log('user checking');
-			var translateY = 'translateY(-' + height + 'px)';
-			$(".container").css("transition", "0.7s");
-			$(".container").css("-webkit-transform", "translateY(-"+ height +"px)");
-			setTimeout(function(){ window.location.href = 'checking.html'; }, 700);
+		$.get("https://api.github.com/gists/09b88eb12da9d86cc93b4e98e65deb0f", function( data ) {
+		  
+		  
+			$(".spinner").css("transition", "0.7s");
+			$(".spinner").css("-webkit-transform", "scale(0, 0)");
 			
-			//$('.container').css({'-webkit-transform':translateY});​
-		}
+			setTimeout(function(){ 
+				$(".spinner").css("transition", "1s");
+				$(".spinner").html('<h1 style="text-align: center; font-size:45pt;">👌</h1>');
+				$(".spinner").css("-webkit-transform", "scale(1, 1)");
+			}, 700);
+			setTimeout(function(){ 
+				var height = $(window).height();
+				var translateY = 'translateY(-' + height + 'px)';
+				$(".container").css("transition", "0.7s");
+				$(".container").css("-webkit-transform", "translateY(-"+ height +"px)");
+				setTimeout(function(){ window.location.href = 'main.html'; }, 700);
+			}, 1400);
+		});
 		/*
 		var input = document.getElementById('phone-input');
 		console.log(input);
