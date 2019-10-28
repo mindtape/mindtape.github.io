@@ -9,6 +9,7 @@
 </head>
 <body>
 	<div class="container">
+		<div class="logo"><img src="img/logo.png"></div>
 		<div class="welcome-text">
 			<h1>Добро пожаловать!</h1>
 			<p class="start-info">Чтобы начать пользоваться сервисом, введите Ваш номер телефона.</p>
@@ -29,11 +30,17 @@
 		var height = $(window).height();
 		function checkUser()
 		{
-			console.log('user checking');
-			var translateY = 'translateY(-' + height + 'px)';
+			if( !$('#phone-input').val() ) {
+		          alert('Братка, укажи номер телефона!');
+		    }
+		    else
+		    {
+		    				var translateY = 'translateY(-' + height + 'px)';
 			$(".container").css("transition", "0.7s");
 			$(".container").css("-webkit-transform", "translateY(-"+ height +"px)");
-			setTimeout(function(){ window.location.href = 'checking.html'; }, 700);
+			setTimeout(function(){ window.location = 'checking.html'; }, 700);
+		    }
+
 			
 			//$('.container').css({'-webkit-transform':translateY});​
 		}

@@ -6,13 +6,48 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+	<style type="text/css">
+		#map { width: 100%; height: 100%; }
+	</style>
 </head>
 <body>
-	<div class="container">
-		<center><img src="https://sun9-6.userapi.com/c627829/v627829141/51cd1/tcQRGwY69bI.jpg"></center>	
+	<div id="map"></div>
+	<div class="settings-button">Настройки</div>
+	<div class="order-card">
+		<label>Маршрут</label>
+		<input type="text" name="phone" class="input fw" id="phone-input" maxlength="10">
+		<a href="">Указать на карте</a>
+		<a href="">Определить автоматически</a>
+		<input type="text" name="phone" class="input fw" id="phone-input" maxlength="10">
+		<a href="javascript:void(0);" class="button fw">Далее</a>
 	</div>
 	<script type="text/javascript">
+		var map = L.map('map').setView([53.276234, 69.417968], 15);
 
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+		}).addTo(map);
+
+		L.marker([53.276234, 69.417968]).addTo(map)
+		    .bindPopup('Акмолинская федерация киберспортсменов')
+		    .openPopup();
+
+		L.marker([53.274449, 69.410199]).addTo(map)
+		    .bindPopup('Вейп-шоп "Vape Room"')
+		    .openPopup();
+
+		L.marker([53.275243, 69.411745]).addTo(map)
+		    .bindPopup('ТОО "Кокшетау-Жолдары", пресс-служба')
+		    .openPopup();
+
+
+		L.marker([53.274279, 69.414346]).addTo(map)
+		    .bindPopup('Акмолинская федерация рестлинга WWE')
+		    .openPopup();
+		    
+		    
 	</script>
 </body>
 </html>

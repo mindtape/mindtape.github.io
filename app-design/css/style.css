@@ -83,7 +83,8 @@ label
 .fw { width: 100%; }
 a { text-decoration: none; color: #005FF9; }
 .privacy-policy { color: #637282; text-align: center; margin-top: 20px; }
-.logo { margin: 10vh 0; }
+.logo { margin: 5svh 0; text-align: center; margin-bottom: 5vh;}
+.logo img { width: 30%; }
 .start-info { margin: 15px 0; }
 .welcome-text { text-align: center; }
 
@@ -139,4 +140,25 @@ a { text-decoration: none; color: #005FF9; }
     transform: scaleY(1.0);
     -webkit-transform: scaleY(1.0);
   }
+}
+
+.order-card
+{
+	position: absolute;
+	bottom: 0;
+	z-index: 999999;
+	background: #ffffff;
+	width: 100%;
+	padding: 10px;
+}
+
+.settings-button
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 999999;
+	background: #ffffff;
+	margin: 20px;
+	padding: 5px;
 }
