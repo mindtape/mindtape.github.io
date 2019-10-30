@@ -5,8 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="media/css/main.css">
 	<script src="https://kit.fontawesome.com/a924e0ea30.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+	<script src="js/leaflet-tilelayer-colorfilter.js"></script>
 </head>
 <body>
+	<div id="map" class="map">
+		
+	</div>
 	<div class="bottom-navbar">
 		<div class="bottom-navbar-item active">
 			<i class="far fa-map"></i>
@@ -16,5 +22,20 @@
 		</div>
 		
 	</div>
+	<script type="text/javascript">
+		var map = L.map('map').setView([53.2847703,69.377373], 17);
+
+		let myFilter = ['invert:100%','grayscale:100%','bright:101%','contrast:81%','saturate:0%']; 
+
+		L.tileLayer.colorFilter('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+		    filter: myFilter,
+		}).addTo(map);
+
+		L.marker([53.2847703,69.377373]).addTo(map)
+	    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+	    .openPopup();
+
+	</script>
 </body>
 </html>
