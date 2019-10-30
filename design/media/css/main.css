@@ -81,9 +81,6 @@ box-shadow: inset 0px 0px 10px 0px rgba(44,48,56,1);
 	background: #31353f;
 	display: inline-block;
 	border-radius: 20px;
--webkit-box-shadow: inset 0px 0px 10px 0px rgba(44,48,56,1);
--moz-box-shadow: inset 0px 0px 10px 0px rgba(44,48,56,1);
-box-shadow: inset 0px 0px 10px 0px rgba(44,48,56,1);
 transition: 0.5s;
 }
 
@@ -111,8 +108,8 @@ transition: 0.5s;
 	padding: 10px;
 		border-top: 1px solid #4e535c;
 	outline: 1px solid #1c1e23;
-	visibility: hidden;
 	transition: 0.5s;
+	display: none;
 }
 
 .decline-button

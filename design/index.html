@@ -6,9 +6,11 @@
 	<link rel="stylesheet" type="text/css" href="media/css/main.css">
 	<script src="https://kit.fontawesome.com/a924e0ea30.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+	<link rel="stylesheet" type="text/css" href="media/css/animate.css">
 	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
 	<script src="js/leaflet-tilelayer-colorfilter.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/polyline.js"></script>
 </head>
 <body>
 	<div id="map" class="map">
@@ -33,7 +35,8 @@
 		<p>Тест тест тест</p> <br>
 		<a href="javascript:void(0);" class="decline-button fw" onclick="closeNotification();">Отмена</a>
 		<a href="tel:77475598018" class="decline-button fw">Звонок клиенту</a>
-		<a href="" class="accept-button fw">Принять</a>
+		<a href="javascript:void(0);" class="accept-button fw" onclick="acceptOrder();">Принять</a>
+		<a href="google.navigation:q=69.40280199050903,53.27007677381146" class="accept-button fw">Включить навигацию</a>  
 	</div>
 	<script type="text/javascript">
 		var map = L.map('map').setView([53.2847703,69.377373], 17);
@@ -69,32 +72,49 @@
 
 		function testOrder()
 		{
-			setTimeout(function(){ showOrderNotification(); }, 4000);
+			setTimeout(function(){ showOrderNotification(); }, 10);
 			
 		}
 		function showOrderNotification()
 		{
-			var height = $(".order-notification").height();	
-			height += 20;
-			var heightString = "translateY(" + height + "px)";
-
-			$(".order-notification").css("transform", heightString);
-			$(".order-notification").css("visibility", "visible");
+			$(".order-notification").css("display", "block");
+			$(".order-notification").addClass("animated slideInUp");
+			var audio = new Audio('media/audio/new_order.m4a');
+			audio.play();
+			/*
 			setTimeout(function(){ 
 				$(".order-notification").css("transform", "translateY(0px)"); 
 				var audio = new Audio('media/audio/new_order.m4a');
 				audio.play();
 			}, 700);
+			*/
 		}
 
 		function closeNotification()
 		{
-			var height = $(".order-notification").height();	
-			height += 20;
-			var heightString = "translateY(" + height + "px)";
-			$(".order-notification").css("transform", heightString);
-			setTimeout(function(){ $(".order-notification").css("display", "none"); }, 700);
 			
+			$(".order-notification").removeClass("animated slideInUp");
+			$(".order-notification").addClass("animated slideOutDown");
+			var audio = new Audio('media/audio/cancel_order.m4a');
+			audio.play();
+			setTimeout(function(){ 
+				$(".order-notification").css("display", "none"); 
+				$(".order-notification").removeClass("animated slideOutDown");
+			}, 700);
+			
+		}
+
+		function acceptOrder()
+		{
+			$.get("https://router.project-osrm.org/route/v1/driving/69.39634323120117,53.28605041038768;69.40280199050903,53.27007677381146?overview=full&alternatives=true&steps=false", function( data ) 
+			{
+			 var latlngs = polyline.decode(data.routes[0].geometry);
+			 console.log(latlngs);
+			 var routePolyline = L.polyline(latlngs, {color: '#005FF9'}).addTo(map);
+			 map.fitBounds(routePolyline.getBounds());
+			 var audio = new Audio('media/audio/accept_order.m4a');
+			audio.play();
+			 });
 		}
 	</script>
 </body>
