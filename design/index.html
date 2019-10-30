@@ -30,8 +30,10 @@
 	</div>
 	<div class="order-notification">
 		<b>Новый заказ</b>
-		<p>Тест тест тест</p>
-		<a href="" class="decline-button">Отмена</a>
+		<p>Тест тест тест</p> <br>
+		<a href="javascript:void(0);" class="decline-button fw" onclick="closeNotification();">Отмена</a>
+		<a href="tel:77475598018" class="decline-button fw">Звонок клиенту</a>
+		<a href="" class="accept-button fw">Принять</a>
 	</div>
 	<script type="text/javascript">
 		var map = L.map('map').setView([53.2847703,69.377373], 17);
@@ -63,13 +65,36 @@
 			audio.play();
 		  }
 		});
+
+
 		function testOrder()
 		{
-
+			setTimeout(function(){ showOrderNotification(); }, 4000);
+			
 		}
-		function showOrderNorification()
+		function showOrderNotification()
 		{
+			var height = $(".order-notification").height();	
+			height += 20;
+			var heightString = "translateY(" + height + "px)";
 
+			$(".order-notification").css("transform", heightString);
+			$(".order-notification").css("visibility", "visible");
+			setTimeout(function(){ 
+				$(".order-notification").css("transform", "translateY(0px)"); 
+				var audio = new Audio('media/audio/new_order.m4a');
+				audio.play();
+			}, 700);
+		}
+
+		function closeNotification()
+		{
+			var height = $(".order-notification").height();	
+			height += 20;
+			var heightString = "translateY(" + height + "px)";
+			$(".order-notification").css("transform", heightString);
+			setTimeout(function(){ $(".order-notification").css("display", "none"); }, 700);
+			
 		}
 	</script>
 </body>
