@@ -108,4 +108,45 @@ a
 	height: 100%;
 	text-align: center;
 	background: #275efe;
+	padding-top: 50%;
+}
+
+.modal
+{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+.modal-content
+{
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 50% 20px;
+  border: 1px solid #e4ecfa;
+}
+
+.modal-content h3
+{ font-weight: 600; }
+
+.modal-content p {margin-top: 10px;}
+
+.modal-actions 
+{
+	margin-top: 30px;
+	width: 100%;
+	text-align: right;
+	text-transform: uppercase;
+}
+
+#unactive
+{
+	color: #6c7486;
+	margin-right: 20px;
 }

@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -32,6 +33,13 @@
 	<div class="loading-screen" style="display: none;">
 		<div class="loader">Loading...</div>
 	</div>
+	<div class="modal">
+		<div class="modal-content">
+			<h3>Ошибка</h3>
+			<p>Невозможно установить соединение с сервером, проверьте подключение к интернету.</p>
+			<div class="modal-actions"><a href="" id="unactive">Закрыть</a> <a href="">Еще раз</a></div>
+		</div>
+	</div>
 	<script type="text/javascript">
 		$( "#target" ).submit(function( event ) {
 		  $("#start-page").addClass("animated zoomOut");
@@ -40,9 +48,13 @@
 		  	$(".loading-screen").show(); 
 		  	$(".loading-screen").addClass("animated slideInUp");
 		  	setTimeout(function(){ 
+		  		$(".modal").show(); 
+		  		$(".modal-content").addClass("animated bounceIn");
+		  		/*
 		  		$(".loading-screen").removeClass("animated slideInUp");
 		  		$(".loading-screen").addClass("animated zoomOut");
-		  	}, 3000);
+		  		*/
+		  	}, 8000);
 		  }, 1000);
 		  
 		  event.preventDefault();
