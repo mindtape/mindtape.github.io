@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Режим водителя</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+Откройте консоль
+
+
+<script type="text/javascript">
+	console.warn('Чтобы начать принимать заказы, введите go()')
+	function go()
+	{
+		console.log('Введите адрес сервера');
+		let serverIp = prompt("Введите адрес сервера");
+		console.warn('Устанавливаем соединение с http://'+ serverIp );
+		let url = 'http://'+serverIp+'/api/test';
+		console.log(url);
+		$.get(url, function( sdata ) {
+			  console.log(sdata);
+			  console.log('Соединение успешно установленно');
+			  console.warn('Генерация UID');
+			  let uid = generatePassword();
+			  console.log('Сгенерировано. Ваш UID - ' + uid);
+			  console.warn('Приступаем к поиску заказов...');
+			  let eventUrl = 'http://'+serverIp+'/events.php';
+			  const evtSource = new EventSource(eventUrl, { withCredentials: true } );
+			  evtSource.addEventListener("order", function(event) {
+			  		console.warn('Новый заказ!');
+			  		console.log(typeof(event.data));
+			  		let slicedData = event.data.slice(1, -1);
+				  	console.log(slicedData);
+				  	let gettedData = JSON.parse(slicedData);
+				  	console.error(gettedData);
+				  	console.error(typeof(gettedData));
+				  	let orderData = {     // объект
+					  from: gettedData.start,  // под ключом "name" хранится значение "John"
+					  to: gettedData.start_coord,        // под ключом "age" хранится значение 30
+					  status: gettedData.status        // под ключом "age" хранится значение 30
+					};
+					console.table(orderData);
+				  	evtSource.removeEventListener("order", function (event) {});
+				});
+		});
+		return true;
+	}
+
+	function generatePassword() {
+    var length = 8,
+        charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+        retVal = "";
+    for (var i = 0, n = charset.length; i < length; ++i) {
+        retVal += charset.charAt(Math.floor(Math.random() * n));
+    }
+    return retVal;
+}
+	/*
+	console.log(localStorage.getItem("ip"));
+
+
+	$( "#target" ).submit(function( event ) {
+		localStorage.setItem("ip", $("input[name='ip']").value());
+		localStorage.setItem("uid", $("input[name='uid']").value());
+
+		
+		const serverIp = $("input[name='ip']").value();
+	  alert( "Handler for .submit() called." ); 
+		event.preventDefault();
+	}); */
+	/*
+	const evtSource = new EventSource("http://localhost/events.php", { withCredentials: true } );
+	evtSource.onmessage = function(event) {
+	  const newElement = document.createElement("li");
+	  const eventList = document.getElementById("list");
+
+	  newElement.innerHTML = "message: " + event.data;
+	  eventList.appendChild(newElement);
+	}
+	*/
+
+</script>
+</body>
+</html>
