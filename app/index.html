@@ -4,61 +4,34 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/loader.css">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"> 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" integrity="sha256-a2tobsqlbgLsWs7ZVUGgP5IvWZsx8bTNQpzsqCSm5mk=" crossorigin="anonymous" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-	<div id="start-page">
-		<div class="container">
-			<h2>Добро пожаловать! Чтобы начать пользоваться сервисом, введите Ваше имя и номер телефона.</h2>
-			<form id="target">
-				<input class="input-field input-margin fw" type="text" name="">
-				<input class="input-field input-margin fw" type="tel" name="">
-				<!--
-				<div class="phone-input">
-					<div class="phone-input-add-on">+7</div>
-					<input class="phone-input-field input-margin" type="tel" name="">
-				</div>
-				-->
-				<input class="input-button input-margin fw" type="submit" name="" value="Продолжить">
-			</form>
-
-			<p class="additional-info">Нажимая продолжить, Вы соглашаетесь с <a href="">политикой конфиденциальности</a></p>
+	<div class="container">
+		<div class="log-logo">
+			<p>Добро пожаловать в приложение для водителей. Здесь Вы можете принимать заказы от пользователей, вести стастистику и многое другое. Но пока что, в силу моей лени, Вы сможете только принимать заказы, и то не факт. Но зарегистрироваться и войти уже можно. </p>
 		</div>
-	</div>
-	<div class="loading-screen" style="display: none;">
-		<div class="loader">Loading...</div>
-	</div>
-	<div class="modal">
-		<div class="modal-content">
-			<h3>Ошибка</h3>
-			<p>Невозможно установить соединение с сервером, проверьте подключение к интернету.</p>
-			<div class="modal-actions"><a href="" id="unactive">Закрыть</a> <a href="">Еще раз</a></div>
+		<div class="log-buttons">
+			<div class="log-button"><div class="button gray left-half f-w">Войти</div></div>
+			<div class="log-button"><div class="button blue right-half f-w" onclick="openPage('reg.html');">Регистрация</div></div>
 		</div>
 	</div>
 	<script type="text/javascript">
-		$( "#target" ).submit(function( event ) {
-		  $("#start-page").addClass("animated zoomOut");
-		  setTimeout(function(){ 
-		  	$("#start-page").hide(); 
-		  	$(".loading-screen").show(); 
-		  	$(".loading-screen").addClass("animated slideInUp");
-		  	setTimeout(function(){ 
-		  		$(".modal").show(); 
-		  		$(".modal-content").addClass("animated bounceIn");
-		  		/*
-		  		$(".loading-screen").removeClass("animated slideInUp");
-		  		$(".loading-screen").addClass("animated zoomOut");
-		  		*/
-		  	}, 8000);
-		  }, 1000);
-		  
-		  event.preventDefault();
-		});
+		function openPage(page)
+		{
+			$('body').addClass('animated slideOutRight');
+			setTimeout(function(){
+			  document.location.href = page;
+			}, 1000);
+			
+			return true;
+		}
 	</script>
+
+
+	
+	
 </body>
 </html>
