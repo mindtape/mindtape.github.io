@@ -51,6 +51,7 @@ body
 	line-height: 60px;
 	padding: 0 10px;
 	text-align: center;
+	font-weight: 600;
 }
 
 .white
@@ -100,13 +101,14 @@ body
 .modal-content p
 {
 	color: #8f96a3;
+	margin-top: 10px;
 }
 
 .modal-buttons
 {
 	text-align: right;
 	text-transform: uppercase;
-	font-weight: 500;
+	font-weight: 600;
 	margin-top: 20px;
 
 }
