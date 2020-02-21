@@ -1,147 +1,124 @@
-html, body
-{
-	box-sizing: border-box;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
-
+* { margin: 0; }
+body, html { height: 100%; }
 body
 {
-	font-family: Arial;
-	font-size: 11pt;
+	background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+ 	background-blend-mode: screen;
+	font-family: 'Open Sans', sans-serif;
+	color: #455065;
 }
 
 .container
 {
 	box-sizing: border-box;
+	width: 100%;
 	height: 100%;
-	display: flex;
+	padding: 15px;
+		display: flex;
     flex-direction: column;
-    padding: 20px;
 }
 
-.button
-{
-
-	box-sizing: border-box;
-	vertical-align: top;
-	display: inline-block;
-	height: 40px;
-	line-height: 39px;
-	padding: 0 10px;
-	text-shadow: 0 -1px rgba(0, 0, 0, 0.4);
-	border: 1px solid;
-	border-radius: 3px;
-	color: #ffffff;
-	box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 1px 2px rgba(0, 0, 0, 0.25);
-	background: #47494f;
-	border-color: #2f3034 #2f3034 #232427;
-	background-image: linear-gradient(to bottom, #55585f, #47494f 66%, #3d3f44);
-	font-weight: 600;
-	text-align: center;
-}
-
-.gray
-{
-	color: #7f889e;
-	background: rgb(222,222,222);
-	background-image: linear-gradient(to bottom, #f5f8fb, #e9edf3);
-	border-color: #dedede;
-	text-shadow: 0 1px rgba(255, 255, 255, 0.7);
-}
-
-.blue
-{
-	background: rgb(0,108,224);
-	background: linear-gradient(0deg, rgba(0,108,224,1) 0%, rgba(53,149,252,1) 100%);
-	border-color: #007bff;
-}
-
-.left-half
-{
-	border-radius: 0;
-	border-radius: 3px 0 0 3px;
-}
-
-.right-half
-{
-	border-radius: 0;
-	border-radius: 0 3px 3px 0;
-}
-
-.f-w { width: 100%; }
-
-.log-buttons
-{
-	display: flex; flex-wrap: wrap;
-	flex: 0 0 auto;
-	margin-bottom: 10px;
-}
-
-.log-button
-{
-	box-sizing: border-box; 
-	flex-shrink: 0;
-	width: 50%;
-}
-
-.log-logo
+.sp-content
 {
 	flex: 1 0 auto;
 }
 
-.input
+.sp-content p
 {
-	box-sizing: border-box;
-	display: inline-block;
-	background: #ffffff;
-    border: 1px solid;
-    border-color: #b3c0e2 #bcc5e2 #c0ccea;
-    border-radius: 3px;
-    height: 40px;
-    line-height: 38px;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.5);
-    padding: 0 10px;
+	font-size: 24pt;
+	color: #ffffff;
+	font-weight: 500;
+	margin-top: 15vh;
 }
 
-.label
+.sp-bottom-buttons
 {
-	color: #7f889e;
-	font-size: 11pt;
-	margin: 5px 0;
+	flex: 0 0 auto;
 }
 
-.settings-header
+.sp-bottom-buttons .button
+{
+	margin-top: 10px;
+}
+
+.button
 {
 	box-sizing: border-box;
-	width: 100%;
-	box-sizing: border-box;
-	vertical-align: top;
-	display: inline-block;
-	height: 40px;
-	line-height: 39px;
+	background: #204ecf;
+	color: #ffffff;
+	border-radius: 5px;
+	height: 60px;
+	line-height: 60px;
 	padding: 0 10px;
-	border: 1px solid;
-	border-right: none;
-	border-left: none;
-
-	box-shadow: inset 0 1px white;
-
-	font-weight: 600;
 	text-align: center;
-	    text-shadow: 0 1px rgba(255, 255, 255, 0.7);
-	color: #7f889e;
-	background: rgb(222,222,222);
-	background-image: linear-gradient(to bottom, #f5f8fb, #e9edf3);
-	border-color: #dedede;
-	border-bottom: 1px solid #c5ccdb;
 }
 
-.settings-container
+.white
+{
+	background: #ffffff;
+	color: #204ecf;
+}
+
+.fw { width: 100%; }
+
+.modal-wrapper
 {
 	box-sizing: border-box;
+	position: absolute;
 	width: 100%;
-	padding: 10px 20px;
-	background: #f3f6fa;
+	height: 100%;
+	padding: 25px;
+	
+}
+
+.modal-window
+{
+	box-sizing: border-box;
+	margin: 0 auto;
+	margin-top: 15vh;
+	box-shadow: 0 1px 1px 0 rgba(19,25,77,0.15), 0 1px 10px 0 rgba(19,27,78,0.15);
+}
+
+.modal-header
+{
+	box-sizing: border-box;
+	background: #ffffff;
+	border-radius: 5px 5px 0 0;
+	text-align: center;
+	padding: 15px;
+	border-bottom: 1px solid #d8d8d8;
+}
+
+.modal-content
+{
+	box-sizing: border-box;
+	background: #ffffff;
+	border-radius: 0 0 5px 5px;
+	padding: 15px;
+}
+
+.modal-content p
+{
+	color: #8f96a3;
+}
+
+.modal-buttons
+{
+	text-align: right;
+	text-transform: uppercase;
+	font-weight: 500;
+	margin-top: 20px;
+
+}
+
+.modal-buttons a
+{
+	text-decoration: none;
+	color: #8f96a3;
+}
+
+.mb-active
+{
+	color: #204ecf !important;
+	margin-left: 10px;
 }

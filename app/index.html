@@ -3,35 +3,34 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>s</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<div class="container">
-		<div class="log-logo">
-			<p>Добро пожаловать в приложение для водителей. Здесь Вы можете принимать заказы от пользователей, вести стастистику и многое другое. Но пока что, в силу моей лени, Вы сможете только принимать заказы, и то не факт. Но зарегистрироваться и войти уже можно (нет). </p>
-		</div>
-		<div class="log-buttons">
-			<div class="log-button"><div class="button gray left-half f-w">Войти</div></div>
-			<div class="log-button"><div class="button blue right-half f-w" onclick="openPage('reg.html');">Регистрация</div></div>
+	<div class="modal-wrapper">
+		<div class="modal-window">
+			<div class="modal-header">
+				<img src="https://img.icons8.com/dusk/64/000000/disconnected--v1.png">
+			</div>
+			<div class="modal-content">
+				<h4>Нет подключения к серверу</h4>
+				<p>Ваш интернет работает, но наш сервер не отвечает. Мы уже работаем над этим.</p>
+				<div class="modal-buttons">
+					<a href="">Закрыть</a>
+					<a href="" class="mb-active">Повторить</a>
+				</div>
+			</div>
 		</div>
 	</div>
-	<script type="text/javascript">
-		function openPage(page)
-		{
-			$('body').addClass('animated slideOutRight');
-			setTimeout(function(){
-			  document.location.href = page;
-			}, 1000);
-			
-			return true;
-		}
-	</script>
-
-
-	
-	
+	<div class="container">
+		<div class="sp-content">
+			<p>Заказывайте грузоперевозки так же просто, как такси</p>
+		</div>
+		<div class="sp-bottom-buttons">
+			<div class="button white fw">Вход</div>
+			<div class="button fw">Регистрация</div>
+		</div>
+	</div>
 </body>
 </html>
