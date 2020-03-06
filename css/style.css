@@ -42,7 +42,7 @@ body {
 	border: 1px solid #EEEEEE;
 	border-top: 0;
 	padding: 0 20px;
-	font-family: 'Arimo', sans-serif; 
+	font-family: 'Inter', sans-serif; 
 	font-size: 11pt;
 
 }
@@ -61,7 +61,7 @@ body {
 
 .lp-button
 {
-	font-family: 'Arimo', sans-serif; 
+	font-family: 'Inter', sans-serif; 
 	width: 100%;
 	height: 48px;
 	line-height: 48px;
