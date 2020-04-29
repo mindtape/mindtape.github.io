@@ -1,29 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Healthy</title>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i&display=swap&subset=cyrillic">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Unna:700&display=swap">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>iFruit</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<div class="container">
-		<p class="lp-logo">Healthy</p>
-		<p>Спасибо за скачивание приложения. Чтобы начать пользоваться сервисом, войдите или зарегистрируйтесь.</p>
-		<form>
-			<span>
-				<input type="text" name="" placeholder="Имя" class="lp-input">
-				<input type="text" name="" placeholder="Электронный адрес" class="lp-input">
-				<input type="password" name="" placeholder="Пароль" class="lp-input">
-				<input type="passwprd" name="" placeholder="Повторите пароль" class="lp-input">	
-			</span>
-
-			<input type="submit" name="" value="Регистрация" class="lp-button">
-		</form>
-		<p class="lp-additional-bottom"><a href="2.html">Второй вариант</a></p>
+	<div id="app">
+		<header class="navbar">
+			<div class="flex">
+				<div class="cell -6">{{ operator }}</div>
+				<div class="cell -6">{{ hours }}:{{ minutes }} {{ battery }}</div>
+			</div>
+		</header>
+		<main class="display">
+			<div class="flex">
+				<div class="cell -3 app-mockup">
+					<div class="app-icon blue"></div>
+					<div class="app-name">PartsGeek</div>
+				</div>
+				<div class="cell -3 app-mockup">
+					<div class="app-icon orange"></div>
+					<div class="app-name">Zillow</div>
+				</div>
+				<div class="cell -3 app-mockup">
+					<div class="app-icon juicy "></div>
+					<div class="app-name">Copart</div>
+				</div>
+				<div class="cell -3 app-mockup">
+					<div class="app-icon purple"></div>
+					<div class="app-name">Wikipedia</div>
+				</div>
+				<div class="cell -3 app-mockup">
+					<div class="app-icon green"></div>
+					<div class="app-name">Chase</div>
+				</div>
+			</div>
+		</main>
 	</div>
+
+	<script type="text/javascript">
+		var app = new Vue({
+			el: '#app',
+		  	data: 
+		  	{
+		   		operator: 'Vodaphone',
+		   		battery: '100%',
+		   		date: 0,
+		   		hours: 0,
+		   		minutes: 0,
+		  	},
+		  	created()
+		  	{
+		  		this.date = new Date();
+		  		this.hours = this.date.getHours();
+		  		if(this.hours < 10) this.hours = "0"+this.hours;
+		  		this.minutes = this.date.getMinutes();
+		  		if(this.minutes < 10) this.minutes = "0"+this.minutes;
+		  	}
+		});
+	</script>
 </body>
 </html>
